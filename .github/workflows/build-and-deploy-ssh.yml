@@ -71,7 +71,6 @@ jobs:
           script: |
             whoami
             docker login ghcr.io --username ${{ github.actor }} --password ${GHCR_TOKEN}
-
     
       - name: Deploy
         uses: appleboy/ssh-action@master
