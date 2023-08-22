@@ -68,7 +68,7 @@ jobs:
           port: ${{ secrets.REMOTE_SSH_PORT }}
           script: |
             whoami
-            docker login ghcr.io --username ${{ env.OWNER_LC }} --password ${{ secrets.GHCR_TOKEN }}
+            docker login ghcr.io --username ${{ github.actor }} --password ${{ secrets.GHCR_TOKEN }}
 
     
       - name: Deploy
