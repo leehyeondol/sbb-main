@@ -69,6 +69,7 @@ jobs:
           script: |
             whoami
             docker login ghcr.io --username ${{ env.OWNER_LC }} --password ${{ secrets.GHCR_TOKEN }}
+
     
       - name: Deploy
         uses: appleboy/ssh-action@master
